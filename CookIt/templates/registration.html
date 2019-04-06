@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<meta charset="UTF-8">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link href="{{ url_for('static',  filename='styles/login.css') }}" rel="stylesheet" type="text/css">
+    <title>COOKIT</title>
+    <script type="text/javascript">
+        function validate(){
+            let email_re = /[^0-9]\w+@[a-z]+\.[a-z]{2,3}/
+            let email = document.querySelector("#email");
+            let pass = document.querySelector("#pass");
+            let fname = document.querySelector("#fname");
+            let lname = document.querySelector("#lname");
+            let phone = document.querySelector("#phone");
+            let check = true;
+
+            if(email.value.length==0 || pass.value.length==0 || confpass.value.length==0 || lname.value.length==0 || fname.value.length==0) {
+                alert("Enter Missing Data!!!");
+                check = false;
+                }
+            if(!email_re.test(email.value)){
+                alert("Invalid Email!!!");
+                check = false;
+                }
+            if(pass.value != confpass.value){
+                alert("Re-check password!!!");
+                check = false;
+                }
+            if(phone.value.length != 10){
+                alert("Invalid Phone Number!!!");
+                check = false;
+                }
+            if(check == true){
+                alert("Registered Sucessfully!!!");
+                }
+            else{
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="ui container">
+    <div class="ui raised very padded segment" style="margin-left:30%; margin-right:30%; margin-top:5%; box-shadow: 3px 3px 3px 3px #a5a5a580;">
+        <h1 style="text-align: center; color: blue;">Sign up</h1>
+        <form action="/house" method="POST" class="ui form" onsubmit="validate();">
+            <div class="field" id="fname">
+                <label>First name</label>
+                <input name="first name" placeholder="First name" type="text">
+            </div>
+            <div class="field">
+                <label>Last name</label>
+                <input id="lname" name="last name" placeholder="Last name" type="text">
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input name="email" id="email" placeholder="Email" type="email">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input name="pass" id="pass" placeholder="Password" type="password">
+            </div>
+            <div class="field">
+                <label>Confirm Password</label>
+                <input name="confpass" id="confpass" placeholder="Confirm password" type="password">
+            </div>
+            <div class="field">
+                <label>Phone Number</label>
+                <input name="phonenum" id="phone" placeholder="Phone Number" type="tel">
+            </div>
+            <button class="ui primary button" type="submit">Create Account</button>
+        </form>
+        <div style="margin-top:1em;">Already existing user? <a style="padding-left: 5px;" href="login.html">Sign in</a></div>
+
+
+    </div>
+</div>
+</body>
+</html>

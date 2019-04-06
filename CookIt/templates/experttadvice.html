@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Ask Our Experts</title>
+
+    <script type="text/javascript">
+        function validate(){
+            let check = true;
+            let fname = document.querySelector("#fname");
+            let email = document.querySelector("#email");
+            let message = document.querySelector("#msg");
+
+            if(fname.value.length==0||message.value.length==0||email.value.length==0){
+                alert("Enter Details Properly!!!");
+                check = false;
+                return false;
+            }
+            if(check==true){
+                alert("Thank you "+ fname.value+ ", Your request was submitted sucessfully.")
+            }
+
+
+        }
+    </script>
+</head>
+
+<body style="background-image: url({{url_for('static', filename='styles/background1.png')}});">
+<div class="ui container" style="margin-top: 5%;">
+    <h1>Ask Our Experts</h1>
+
+    <form class="ui form" action="/expert" method="post" onsubmit="validate();">
+        <div class="field">
+            <label>First name</label>
+            <input type="text" name="first-name" id="fname" placeholder="First Name">
+        </div>
+        <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" id="email" placeholder="Email">
+        </div>
+        <div class="field">
+            <label>Send Us Your Message</label>
+            <textarea id="msg"></textarea>
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+    </form>
+    &emsp;
+    <p style="font-family: 'Roboto', sans-serif;">
+        <a href="/login.html">Go Back</a>
+    </p>
+
+</div>
+</body>
+</html>

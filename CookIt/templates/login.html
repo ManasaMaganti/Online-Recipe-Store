@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<meta charset="UTF-8">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link href="{{ url_for('static',  filename='styles/login.css') }}" rel="stylesheet" type="text/css">
+    <title>COOKIT</title>
+    <script type="text/javascript">
+        function validate(){
+            let pass = document.querySelector("#pass");
+            let fname = document.querySelector("#fname");
+            let check = true;
+
+            if(fname.value.length==0)
+            {
+                alert("Enter name Properly!");
+                check = false;
+            }
+            if(pass.value.length == 0){
+                alert("Enter password!!!");
+                check = false;
+                }
+            if(check == true){
+                alert("Logged In Sucessfully!!!");
+                }
+
+        }
+    </script>
+</head>
+<body>
+<div class="ui menu">
+  <div class="right menu">
+    <a href="about.html" class="item">About Us</a>
+  </div>
+</div>
+<div class="ui container">
+    <div class="ui raised very padded segment" style="margin-left:30%; margin-right:30%; margin-top:5%; box-shadow: 3px 3px 3px 3px #a5a5a580;">
+        <h1 style="text-align: center; color: blue;">Log In</h1>
+        <form action="/house" method="POST" class="ui form" onsubmit="validate();">
+            <div class="field" >
+                <label>Username:</label>
+                <input name="first name" id="fname" placeholder="User name" type="text">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input name="pass" id="pass" placeholder="Password" type="password">
+            </div>
+            <button class="ui primary button" type="submit">Login</button>
+        </form>
+        <div style="margin-top:1em;">New user?<a style="padding-left: 5px;" href="registration.html">Sign Up</a></div>
+
+
+    </div>
+</div>
+</body>
+</html>

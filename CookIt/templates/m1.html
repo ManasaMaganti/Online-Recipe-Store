@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/m1.css') }}" />
+
+<title>cookIT.com</title>
+</head>
+
+<body>
+<div class="ui menu">
+  <div class="right menu">
+    <a href="./about.html" class="item">About Us</a>
+    <a href="/expert" class="item">Expert Advice</a>
+    <a class="item"><img src="{{ url_for('static', filename='styles/profile.png') }}" alt="">{{data["name"]}}</a>
+    <a class="item" href="login.html">Logout</a>
+  </div>
+</div>
+<div id="container">
+		<div id="mainpic">
+        	<h1 style="color: white;">cook<span class="lighter" style="color: blue;">IT</span></h1>
+            <h2 style="color: white;">New Flavours at your reach!</h2>
+        </div>   
+        
+        <div id="menu" style="background-image:url({{ url_for('static', filename='styles/menu.png') }});">
+            <ul>
+                {% for x in data["lists"].keys() %}
+                    <div class="dropdown">
+                        <button class="dropbtn">{{ x }}</button>
+                        <div class="dropdown-content">
+                            {% for y in data["lists"][x] %}
+                                <a href="/food/{{y}}">{{ y.upper() }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </ul>
+
+        </div>
+        
+		<div id="content">
+        	<h2>ALOO GOBI </h2>
+        	<p>&nbsp;</p>
+           	<p>&nbsp;</p>
+       	  <img src="{{ url_for('static', filename='styles/aloo_gobi.jpg') }}" width="250px" height="200px" id="displayimg">
+          <br>
+          <br>
+          <h3>Ingredients</h3>
+        	<p>2 chopped,peeled,washed & dried potato<br>
+                1 chopped onion<br>
+                4 finely chopped green chilli<br>
+                1 teaspoon coriander powder<br>
+                1/5 cup sunflower oil<br>
+                1/2 tablespoon cumin seeds<br>
+                1 teaspoon powdered turmeric<br>
+                1/4 tablespoon garlic paste<br>
+                1/2 large chopped,washed & dried cauliflower<br>
+                1/8 cup peas<br>
+                1/2 tablespoon garam masala powder<br>
+                1 teaspoon powdered red chilli<br>
+                1/2 teaspoon asafoetida<br>
+                1 pinches salt<br>
+                1/4 tablespoon ginger paste<br>
+                1/4 cup water</p>
+        	<p>&nbsp;</p>
+        <h3>Preparation</h3>
+        	<p>For preparing this easy North Indian recipe, heat oil in a pan over medium flame. Once the oil is sufficiently hot, add cumin seeds, asafoetida and turmeric powder in the pan. Allow these ingredients to fry for around 30-40 seconds on medium flame. Then add potatoes to this sauteed mixture and cook the dish for 2 minutes or until tender. Then, add washed and chopped cauliflower in the same pan. After mixing these ingredients properly, add garam masala powder, red chilli powder, coriander powder and salt. Mix all the ingredients well so that the potato and cauliflower gets properly coated.Cook the dish for 5 to 6 minutes. Make sure that you keep stirring the dish from time to time, else it might stick to the bottom of the pan. If the mixture gets too thick, pour enough water, accordingly. Do not add too much water as we want the dish to be dry. Reduce the flame to low after 3-4 minutes and then cover the pan with a lid
+            </p>
+        	<p>&nbsp;</p>
+        	<h3>Suggestions</h3>
+            <textarea class="suggestions"></textarea>
+            <p>&nbsp;</p>
+        	<p>&nbsp;</p>
+        	<p>&nbsp;</p>
+            <p>&nbsp;</p>
+            
+            <div id="footer">
+            <h3>FOLLOW US ON:</h3>
+            <img src="{{ url_for('static', filename='styles/fb.jpg') }}" height="50px" width="50px">
+            &emsp;
+            <img src="{{ url_for('static', filename='styles/insta.jpg') }}" height="50px" width="50px">
+            <br>
+            <span id="cr">&copy; All rights reserved to cookIT.com</span>
+            </div>
+      </div>
+   </div>
+
+</body>
+</html>

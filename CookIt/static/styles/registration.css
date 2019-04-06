@@ -1,0 +1,70 @@
+body  {
+  background-image: url("ingredients.jpg");
+  background-color: #cccccc;
+}
+.button {
+  background-color: #white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1:hover {
+font-size: 20px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.22),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+input[type=text] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=first name],
+input[type=middle name],
+input[type=last name],
+input[type=email] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=phone no] {
+  width: 95%;
+  padding: 10px 18px;
+  margin: 8px 0;
+  box-sizing: border-box;}
+input[type=password] {
+  width: 905%;
+  padding: 10px 18px;
+  margin: 8px 0;
+  box-sizing: border-box;}
+
+input[type=create account] {
+  width: 95%;
+  padding: 10px 18px;
+  margin: 8px 0;
+  box-sizing: border-box;}
+input[type=retype password] {
+  width: 95%;
+  padding: 10px 18px;
+  margin: 8px 0;
+  box-sizing: border-box;}
+.center {
+  margin: auto;
+ width: 30%;
+  border: 1px solid pink;
+    padding: 50px;
+}
+h1{
+ text-align: center;
+ color:blue;
+  text-shadow: 0px 4px 6px green;
+}
+b{
+color:BLUE;
+}

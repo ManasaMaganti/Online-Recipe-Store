@@ -1,0 +1,178 @@
+body {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	font: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #061C37;
+	background-color: #FCFBEF;
+	background-image:url(background1.png);
+	background-repeat:repeat-x;
+}
+*
+{
+  margin: 0 auto 0 auto;
+ text-align:left;}
+
+#container
+{
+  display: block;
+  left: 17%;
+  height:auto;
+  position: absolute;
+  width: 940px;
+}
+
+#mainpic h1
+{
+	position:absolute;
+text-align:right;
+font-size:30px;
+color: #ffffff ;
+left:40px;
+top:10px;
+}
+
+
+#mainpic h2
+{
+position:absolute;
+text-align:right;
+color: #ffffff;
+left:40px;
+top:40px;
+}
+
+#mainpic
+{
+background-image:url(ingredients.jpg);
+background-repeat:no-repeat;
+width:900px;
+height:354px;	
+}
+
+.lighter
+{
+color:#0000FF;
+	
+}
+
+
+#menu
+{
+
+background-repeat:no-repeat;
+width:940px;
+height:69px;
+float:left;
+clear:both;
+}
+
+#displayimg
+{
+box-shadow: 10px 10px 5px #C0C0C0;
+}
+
+#content
+{
+width:880px;
+height:auto;
+background-color:#FFF;
+padding-left:10px;
+padding-right:10px;
+padding-bottom:5px;
+}
+
+
+a,a:visited
+{
+color:#E4CA10;
+text-decoration:none;
+font-weight:bold;
+}
+
+#menu ul {
+	list-style: none;
+	padding: 0px;
+	margin-left:auto;
+	width:900px;
+}
+
+#menu li {
+	list-style: none;
+	padding: 0px;	
+	display: inline; 
+	
+}
+
+#menu a,#menu a:visited {
+	float: left;
+	width: 150px;
+	height: 40px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color:#3C3504;
+	font-weight: bold;
+	padding-top: 16px;
+	font-size: 17px;
+}
+
+#menu a:hover{
+	color:#B39311;
+}
+
+
+
+html, body {
+text-align: center;
+}
+p {text-align: left;}
+
+.suggestions{
+	border-style: double;
+	width: 500px;
+	height: 90px;
+}
+.dropbtn {
+  background-color: #8B4513;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #DAA520;}
+
+#cr{
+	position: absolute;
+	background-color: #808080;
+	color: #DCDCDC;
+	width: 100%;
+	text-align: center;
+}

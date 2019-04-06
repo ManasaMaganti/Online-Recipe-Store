@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body style="background-image: url({{url_for('static', filename='styles/background1.png')}});">
+    <div class="ui container" style="margin-top: 5%;">
+        <div class="ui raised segment">
+            <h1>About Us</h1>
+            <img class="ui large rounded image" src="{{url_for('static', filename='styles/about.jpg')}}" width="500" height="300" alt="">
+            &emsp;
+            <p style="font-family: 'Roboto', sans-serif;">
+                <em><strong>Create your own innovations and let us know!</strong></em>
+                <br>
+                <br>
+                <b>Contact us:</b>
+                <br>
+                &emsp;
+                <img src="{{url_for('static', filename='styles/p1.png')}}" width="100px" height="100px">
+                <br>
+                <b>E-mail:</b>
+                <br>
+                contactus@cookit.com
+                <br>
+                <b>Phone:</b>
+                <br>
+                9123456789
+                <br>
+            </p>
+        </div>
+        <a href="login.html">Go Back</a>
+    </div>
+</body>
+</html>
